@@ -12,12 +12,16 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 //    private lateinit var binding: ActivityMainBinding
     lateinit var button: Button
+    lateinit var persionnumButton: Button
+    lateinit var todayButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
         // Referencing and Initializing the button
         button = findViewById(R.id.clickBtn)
+        persionnumButton= findViewById(R.id.persionnumButton)
+        todayButton =findViewById(R.id.todaybutton)
         // Setting onClick behavior to the button
         button.setOnClickListener{
         // Initializing the popup menu and giving the reference as current context
@@ -60,12 +64,27 @@ class MainActivity : AppCompatActivity() {
                         true
                     }
 
+
                     else -> false
                 }
 
             }
             // Showing the popup menu
             popupMenu.show()
+        }
+        todayButton.setOnClickListener{
+            val intent=Intent(
+                this@MainActivity,
+                TodayDate::class.java
+            )
+            startActivity(intent)
+        }
+        persionnumButton.setOnClickListener{
+            val intent=Intent(
+                this@MainActivity,
+                PersianNum::class.java
+            )
+            startActivity(intent)
         }
     }
 

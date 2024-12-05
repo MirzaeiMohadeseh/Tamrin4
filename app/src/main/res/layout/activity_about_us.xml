@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/aboutustextView"
-        android:layout_width="96dp"
+        android:layout_width="103dp"
         android:layout_height="35dp"
         android:drawableLeft="@drawable/ic_home"
         android:fontFamily="@font/bnazanin"
