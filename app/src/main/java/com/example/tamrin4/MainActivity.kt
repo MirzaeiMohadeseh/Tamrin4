@@ -1,9 +1,6 @@
 package com.example.tamrin4
-
 import android.content.Intent
-import android.health.connect.datatypes.units.Length
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.PopupMenu
 import android.widget.Toast
@@ -72,17 +69,17 @@ class MainActivity : AppCompatActivity() {
             // Showing the popup menu
             popupMenu.show()
         }
-        todayButton.setOnClickListener{
-            val intent=Intent(
-                this@MainActivity,
-                TodayDate::class.java
-            )
-            startActivity(intent)
-        }
         persionnumButton.setOnClickListener{
             val intent=Intent(
                 this@MainActivity,
                 PersianNum::class.java
+            )
+            startActivity(intent)
+        }
+        todayButton.setOnClickListener{
+            val intent=Intent(
+                this@MainActivity,
+                CurrentDate::class.java
             )
             startActivity(intent)
         }
